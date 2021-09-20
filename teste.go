@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	adicionar "hello_world/funct"
+	arvore "hello_world/tree"
 )
 
 func Add(value1 int, value2 int) int {
@@ -27,8 +27,10 @@ func main() {
 			fmt.Printf("Matriz[%d][%d] = %d\n", i, j, matrix[i][j])
 		}
 	}
-	var resultado int = adicionar.Soma(5, 9)
+	// var resultado int = adicionar.Soma(5, 9)
 
-	fmt.Printf("Resultado da soma: %d", resultado)
+	// fmt.Printf("Resultado da soma: %d", resultado)
 
+	var result = arvore.Insert(arvore.MyTree())
+	fmt.Println("Resultado da chave:", result)
 }
