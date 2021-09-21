@@ -8,20 +8,24 @@ type No struct {
 	NoDir *No
 }
 
-var arvore No
-
 func MyTree() No {
+	var arvore No
 	arvore.chave = 15
 	arvore.NoDir = nil
 	arvore.NoEsq = nil
 	fmt.Printf("%+v\n", arvore)
 	return arvore
 }
-func Insert(arvore No) int {
+func Search(arvore No, valor int) bool {
 	var inserirArvore = &arvore
-	if inserirArvore.chave > 0 {
-		fmt.Println("A arvore tem raiz maior do que 0")
-		return arvore.chave
+	if inserirArvore == nil {
+		return false
 	}
-	return 0
+	if inserirArvore.chave == valor {
+		fmt.Print("Valor encontrado!: ", inserirArvore.chave)
+		return true
+	} else {
+		fmt.Printf("O valor não foi encontrado")
+		return false
+	}
 }

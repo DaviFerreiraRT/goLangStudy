@@ -31,6 +31,5 @@ func main() {
 
 	// fmt.Printf("Resultado da soma: %d", resultado)
 
-	var result = arvore.Insert(arvore.MyTree())
-	fmt.Println("Resultado da chave:", result)
+	arvore.Search(arvore.MyTree(), 55)
 }
